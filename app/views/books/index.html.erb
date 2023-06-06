@@ -1,0 +1,49 @@
+<h1>Books</h1>
+
+<table class="teble">
+
+  <thead>
+    <tr>
+      <th class="header1">Title</th>
+      <th class="header2">Body</th>
+    </tr>
+  </thead>
+
+<% @books.each do |book| %>
+
+<tbody>
+  <tr>
+    <td><span><%= book.title %></span></td>
+
+    <td><span><%= book.body %></span></td>
+
+    <!--詳細画面へ遷移-->
+    <td><span>
+      <%= link_to "show", book_path(book.id) %>
+    </span></td>
+
+    <td><span>
+  　  <%= link_to "edit", edit_book_path(book.id) %>
+　  </span></td>
+
+    <td><span>
+    　<%= link_to "destroy", book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+    </span></td>
+  </tr>
+</tbody>
+
+<% end %>
+
+</table>
+
+<%= form_with model: Book.new, url: books_path, method: :post do |f| %>
+
+  <h2>New Book</h2>
+  <h4>title</h4>
+  <%= f.text_area :title %>
+
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'Create Book' %>
+<% end %>
