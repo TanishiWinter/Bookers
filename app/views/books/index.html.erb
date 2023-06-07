@@ -19,15 +19,15 @@
 
     <!--詳細画面へ遷移-->
     <td><span>
-      <%= link_to "show", book_path(book.id) %>
+      <%= link_to "Show", book_path(book.id) %>
     </span></td>
 
     <td><span>
-  　  <%= link_to "edit", edit_book_path(book.id) %>
+  　  <%= link_to "Edit", edit_book_path(book.id) %>
 　  </span></td>
 
     <td><span>
-    　<%= link_to "destroy", book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+    　<%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
     </span></td>
   </tr>
 </tbody>
