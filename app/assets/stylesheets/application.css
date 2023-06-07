@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 35px;
+}
+
+p, ol, ul, td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 35px;
+}
+
+div.field, div.actions{
+  margin-bottom: 10px;
+}
+
+#alert-danger {
+    width: 450px;
+    border: 5px solid red;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
